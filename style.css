@@ -31,6 +31,7 @@ box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 position: sticky;
 top: 0;
 z-index: 1000;
+position: relative;
 }
 
 .logo-container {
@@ -1107,7 +1108,7 @@ font-weight: bold;
     display: none;
     background: none;
     border: none;
-    color: white;
+    color: var(--verde-oscuro);
     font-size: 1.8rem;
     cursor: pointer;
 }
@@ -1122,13 +1123,14 @@ font-weight: bold;
         display: none; /* Escondemos el menú por defecto */
         flex-direction: column;
         position: absolute;
-        top: 70px; /* Ajusta según la altura de tu navbar */
+        top: 100%; /* Se posiciona justo debajo del navbar */
         left: 0;
         width: 100%;
         background-color: var(--verde-oscuro);
         padding: 20px 0;
         text-align: center;
         z-index: 1000;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     }
 
     /* Clase que añadiremos con JS para mostrarlo */
@@ -1138,5 +1140,9 @@ font-weight: bold;
 
     .nav-links li {
         margin: 15px 0;
+    }
+
+    .nav-links a {
+        color: white;
     }
 }
