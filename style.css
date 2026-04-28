@@ -1227,3 +1227,56 @@ font-weight: bold;
         display: flex !important;
     }
 }
+
+/* ARREGLO EXCLUSIVO PARA EL MENÚ MÓVIL */
+@media (max-width: 768px) {
+    .navbar {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        padding: 0 20px !important;
+        height: 80px !important;
+    }
+
+    #boton-menu {
+        display: flex !important;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 35px !important;
+        height: 25px !important;
+        cursor: pointer;
+        margin-left: auto;
+        z-index: 2500;
+    }
+
+    #boton-menu span {
+        display: block;
+        width: 100%;
+        height: 4px;
+        background-color: #004d00 !important; /* El verde de las rayas */
+        border-radius: 2px;
+    }
+
+    .nav-links {
+        display: none; /* Se oculta */
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: #004d00 !important;
+        padding: 20px 0;
+        z-index: 2400;
+    }
+
+    .nav-links.active {
+        display: flex !important; /* Se muestra al pulsar */
+    }
+
+    .nav-links a {
+        color: white !important;
+        padding: 15px;
+        display: block;
+        text-align: center;
+    }
+}
