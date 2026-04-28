@@ -728,16 +728,6 @@ color: var(--verde-oscuro);
 font-weight: bold;
 }
 
-.team-group {
-display: none;
-padding: 60px 10%;
-animation: fadeIn 0.5s ease;
-}
-
-.team-group.active {
-display: block;
-}
-
 .players-grid {
 display: grid;
 grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -1199,7 +1189,8 @@ font-weight: bold;
     }
 
     /* Plantilla */
-    .team-group { padding: 40px 5%; }
+    .team-group { display: none; padding: 40px 5%; }
+    .team-group.active { display: block; }
     .position-title h2 { font-size: 1.8rem; }
     .player-img { height: 280px; }
     .players-grid { grid-template-columns: repeat(2, 1fr); }
