@@ -612,14 +612,18 @@ box-shadow: 0 6px 20px rgba(138, 154, 91, 0.2);
 }
 
 /* Manejo de visibilidad de equipos */
+.squad-display {
+overflow: hidden;
+}
+
 .team-group {
-display: none; /* Oculto por defecto */
+display: none !important;
 padding: 60px 10%;
 animation: fadeIn 0.6s ease-out;
 }
 
 .team-group.active {
-display: block; /* Solo se muestra el activo */
+display: block !important;
 }
 
 .position-title {
@@ -1097,8 +1101,8 @@ padding: 10px;
     }
 
     /* Plantilla */
-    .team-group { display: none; padding: 40px 5%; }
-    .team-group.active { display: block; }
+    .team-group { display: none !important; padding: 40px 5%; }
+    .team-group.active { display: block !important; }
     .position-title h2 { font-size: 1.8rem; }
     .player-img { height: 280px; }
     .players-grid { grid-template-columns: repeat(2, 1fr); }
