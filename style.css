@@ -340,18 +340,7 @@ font-size: 0.85rem;
 color: #666;
 }
 
-/* Responsive general */
-@media (max-width: 768px) {
-.intro-container, .values-section, .stats-bar { flex-direction: column; text-align: center; }
-.gallery-container { grid-template-columns: repeat(2, 1fr); }
-.hero h1 { font-size: 2.5rem; }
-.slide { width: 200px; }
-.slide img { max-width: 150px; }
-@keyframes scroll {
-0% { transform: translateX(0); }
-100% { transform: translateX(calc(-200px * 7)); }
-}
-}
+
 
 @keyframes fadeIn {
 from { opacity: 0; transform: translateY(10px); }
@@ -713,11 +702,7 @@ color: var(--verde-oscuro);
 padding: 10px;
 }
 
-@media (max-width: 768px) {
-.team-group { padding: 40px 5%; }
-.position-title h2 { font-size: 1.8rem; }
-.player-img { height: 280px; }
-}
+
 
 /* --- ESTILOS ESPECÍFICOS DE PLANTILLA --- */
 .squad-bg {
@@ -911,16 +896,7 @@ font-weight: bold;
     position: absolute;
 }
 
-/* Responsive móvil */
-@media (max-width: 768px) {
-    .contact-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-    .contact-container {
-        padding: 40px 5%;
-    }
-}
+
 
 /* --- SECCIÓN PARTIDOS --- */
 .match-container {
@@ -1029,9 +1005,7 @@ font-weight: bold;
     border-top: 1px solid #eee;
 }
 
-@media (max-width: 480px) {
-    .matches-grid { grid-template-columns: 1fr; }
-}
+
 
 /* --- ESTILOS DE RESULTADOS Y PRÓXIMO --- */
 
@@ -1221,5 +1195,23 @@ font-weight: bold;
 
     .match-filter {
         flex-wrap: wrap;
+        justify-content: center;
     }
+
+    /* Plantilla */
+    .team-group { padding: 40px 5%; }
+    .position-title h2 { font-size: 1.8rem; }
+    .player-img { height: 280px; }
+    .players-grid { grid-template-columns: repeat(2, 1fr); }
+
+    /* Partidos */
+    .matches-grid { grid-template-columns: 1fr; }
+    .contact-container { padding: 40px 5%; }
+
+    /* General */
+    .gallery-container { grid-template-columns: repeat(2, 1fr); }
+    .hero h1 { font-size: 2.5rem; }
+    .intro-container, .values-section, .stats-bar { flex-direction: column; text-align: center; }
+    .slide { width: 200px; }
+    .slide img { max-width: 150px; }
 }
