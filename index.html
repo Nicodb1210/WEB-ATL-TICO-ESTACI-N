@@ -190,13 +190,15 @@
     </script>
 
     <script>
-    const menu = document.getElementById('mobile-menu');
-    const links = document.getElementById('nav-list');
-
-    menu.onclick = function() {
-        links.classList.toggle('active');
-        console.log("Cambiando estado del menú");
-    };
-</script>
+        const btn = document.getElementById('boton-menu');
+        const menu = document.getElementById('nav-list');
+    
+        if(btn) {
+            btn.onclick = function() {
+                menu.classList.toggle('active');
+                console.log("Menú abierto");
+            }
+        }
+    </script>
 </body>
 </html>
