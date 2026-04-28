@@ -30,53 +30,76 @@ overflow-x: hidden;
     position: relative;
 }
 
-/* Botón Hamburguesa Moderno */
+/* 1. Botón Hamburguesa Mejorado */
 .menu-toggle {
-    display: none;
+    display: none; /* Se oculta en PC */
     flex-direction: column;
+    justify-content: space-between;
+    width: 30px;      /* Ancho fijo */
+    height: 21px;     /* Alto fijo */
     cursor: pointer;
-    gap: 5px;
+    z-index: 1001;
 }
 
 .menu-toggle span {
-    width: 30px;
+    width: 100%;
     height: 4px;
     background-color: #004d00; /* Verde oscuro */
     border-radius: 2px;
-    transition: 0.3s;
+    display: block; /* Forzamos que sea un bloque visible */
 }
 
-/* --- AJUSTES PARA MÓVIL --- */
+/* 2. AJUSTES PARA MÓVIL */
 @media (max-width: 768px) {
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 5%;
+        position: relative; /* Importante para que el menú no flote mal */
+    }
+
     .menu-toggle {
-        display: flex; /* Ahora sí se verá */
+        display: flex !important; /* Forzamos que se vea en móvil */
     }
 
     .logo-text {
-        font-size: 14px; /* Un poco más pequeño para que no choque */
+        font-size: 14px;
     }
 
+    /* 3. Menú Desplegable */
     .nav-links {
-        display: none;
+        display: none; /* Oculto por defecto */
         flex-direction: column;
         position: absolute;
-        top: 100%;
+        top: 100%; /* Justo debajo de la navbar */
         left: 0;
         width: 100%;
-        background: #004d00;
-        padding: 20px 0;
+        background: #004d00; /* Fondo verde del club */
+        padding: 10px 0;
         z-index: 1000;
+        margin: 0;
+        list-style: none;
     }
 
+    /* Esta clase es la que activa el JS */
     .nav-links.active {
-        display: flex;
+        display: flex !important;
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: center;
     }
 
     .nav-links a {
-        color: white;
+        color: white !important;
         padding: 15px;
         display: block;
+        text-decoration: none;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
     }
+}
 
     /* Arreglo para el ticker de abajo (Próximo partido) */
     .live-ticker, .next-match-bar {
