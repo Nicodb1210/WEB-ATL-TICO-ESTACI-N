@@ -340,14 +340,11 @@ font-size: 0.85rem;
 color: #666;
 }
 
-/* Responsive */
+/* Responsive general */
 @media (max-width: 768px) {
 .intro-container, .values-section, .stats-bar { flex-direction: column; text-align: center; }
 .gallery-container { grid-template-columns: repeat(2, 1fr); }
-.menu-toggle { display: flex; }
-.nav-links { display: none; }
 .hero h1 { font-size: 2.5rem; }
-/* Ajuste scroll sponsors móvil */
 .slide { width: 200px; }
 .slide img { max-width: 150px; }
 @keyframes scroll {
