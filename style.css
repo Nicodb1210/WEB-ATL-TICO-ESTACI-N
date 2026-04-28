@@ -1115,34 +1115,111 @@ font-weight: bold;
 
 /* --- ESTILOS PARA MÓVIL --- */
 @media (max-width: 768px) {
+
+    /* Botón hamburguesa: visible, oscuro, tamaño generoso */
     .menu-toggle {
-        display: block; /* Mostrar botón en móvil */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        background-color: var(--verde-oscuro);
+        border: none;
+        border-radius: 8px;
+        color: white;
+        font-size: 1.4rem;
+        cursor: pointer;
+        z-index: 1100;
     }
 
+    /* Menú desplegable */
     .nav-links {
-        display: none; /* Escondemos el menú por defecto */
+        display: none;
         flex-direction: column;
         position: absolute;
-        top: 100%; /* Se posiciona justo debajo del navbar */
+        top: 100%;
         left: 0;
         width: 100%;
         background-color: var(--verde-oscuro);
         padding: 20px 0;
         text-align: center;
         z-index: 1000;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     }
 
-    /* Clase que añadiremos con JS para mostrarlo */
     .nav-links.active {
         display: flex;
     }
 
     .nav-links li {
-        margin: 15px 0;
+        margin: 12px 0;
     }
 
     .nav-links a {
         color: white;
+        font-size: 1.1rem;
+    }
+
+    /* Centrar contenido general en móvil */
+    .intro-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .intro-text h2,
+    .intro-text p {
+        text-align: center;
+    }
+
+    .separator {
+        margin: 15px auto 25px;
+    }
+
+    .ticker-content {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+    }
+
+    .ticker-content span:nth-child(even) {
+        display: none;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .philosophy-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .facilities-container {
+        flex-direction: column;
+    }
+
+    .staff-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .section-title {
+        text-align: center;
+    }
+
+    .page-header h1 {
+        font-size: 2rem;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .match-filter {
+        flex-wrap: wrap;
     }
 }
